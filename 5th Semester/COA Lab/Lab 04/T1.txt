@@ -1,0 +1,88 @@
+.data
+	CV: .asciiz"########################### CV ###############################\n"
+	Name: .asciiz"Name: "
+	FatherName: .asciiz"Father Name: "
+	Education: .asciiz"Education: "
+	Experience: .asciiz"Experience: "
+	input1: .space 15
+	input2: .space 15
+	input3: .space 15
+	input4: .space 15
+	str1: .asciiz"Enter your Name: "
+	str2: .asciiz"Enter your Father Name: "
+	str3: .asciiz"Enter your Education: "
+	str4: .asciiz"Enter your Experience: "
+.text
+
+main:
+
+	li $v0,4
+	la $a0,str1
+	syscall
+
+	li $v0,8
+	la $a0,input1
+	li $a1,15
+	syscall
+
+	li $v0,4
+	la $a0,str2
+	syscall
+
+	li $v0,8
+	la $a0,input2
+	li $a1,15
+	syscall
+
+	li $v0,4
+	la $a0,str3
+	syscall
+
+	li $v0,8
+	la $a0,input3
+	li $a1,15
+	syscall
+
+	li $v0,4
+	la $a0,str4
+	syscall
+
+	li $v0,8
+	la $a0,input4
+	li $a1,15
+	syscall
+
+	li $v0,4
+	la $a0,CV
+	syscall
+
+	li $v0,4
+	la $a0,Name
+	syscall
+	li $v0,4
+	la $a0,input1
+	syscall
+
+	li $v0,4
+	la $a0,FatherName
+	syscall
+	li $v0,4
+	la $a0,input2
+	syscall
+
+	li $v0,4
+	la $a0,Education
+	syscall
+	li $v0,4
+	la $a0,input3
+	syscall
+
+	li $v0,4
+	la $a0,Experience
+	syscall
+	li $v0,4
+	la $a0,input4
+	syscall
+
+	li $v0,10
+	syscall

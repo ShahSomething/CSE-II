@@ -1,0 +1,41 @@
+.data
+	str: .asciiz"Enter A: "
+	str1: .asciiz"Enter B: "
+	str2: .asciiz"Multiples of A from A to A*B:\n"
+.text
+
+main:
+	li $v0,4
+	la $a0,str
+	syscall
+
+	li $v0,5
+	syscall
+	move $t0,$v0
+
+	li $v0,4
+	la $a0,str1
+	syscall
+
+	li $v0,5
+	syscall
+	move $t1,$v0
+
+	li $v0,4
+	la $a0,str2
+	syscall
+
+	li $t2,1
+label:
+	mul $t3,$t0,$t2
+	la $a0,$t3
+	li $v0,1
+	syscall
+	addi $t2,$t2,1
+	ble $t2,$t1, label
+	li $v0,10
+	syscall
+
+	
+	
+
