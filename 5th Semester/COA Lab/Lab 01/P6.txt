@@ -1,0 +1,10 @@
+main:
+li  $v0,5 #input value from user
+syscall
+mov $t0,$a0
+li  $v0,5 #input value from user
+syscall
+mov $t1,$a0
+add $t2,$t0,$t1
+li $v0,10
+syscall
