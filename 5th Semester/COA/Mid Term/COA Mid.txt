@@ -1,0 +1,22 @@
+A Program counter is a special purpose register that is used by the processor to store the address of next instruction to be executed. After execution of one instruction the PC is incremented to point to the next instruction and so on. In case of Context switching, the processor saves the PC of one process and loads the PC of other process, the saved PC is then used when the first process is reloaded. 
+
+
+
+
+MAR stands for Memory Address Register, it is used to store the address of the data that we want to access while MBR stands for Memory Buffer Register, it is used for storing the data that we want to access temporarily.
+
+A program is executed line by line sequentially, the mechanism  by which other modules or higher priority processes may interrupt the normal sequence of execution are known as Interrupts. 
+In the Disable Interrupts approach, further interrupts are ignored by the processor whilst processing one interrupt. These interrupts remain pending and are checked after first interrupt gets processed. Interrupts are handled in sequence.
+In Priorities interrupts technique, low priority interrupts can be interrupted by higher priority interrupts. The processor returns to previous interrupt once the higher priority interrupt has been processed.
+
+part i: The maximum memory address space that the processor can access directly if it is connected to a 16-bit memory is 2^16 which is approximately 64 kb.
+
+part ii:  i: The maximum memory address space that the processor can access directly if it is connected to a 8-bit memory will also be 64 kb because the address length consists of 16-bits. 
+
+A bus is a communication pathway connecting two or more devices.
+A bus can either be dedicated bus or multiplexed bus.
+Dedicated bus:
+	A dedicated bus has separate data and address lines. Only one type of data can be sent by dedicated bus at one time. This bus has good performance rate as it is only assigned to a particular function. It also has less waiting time. 
+Multiplexed bus:
+	Multiplexed bus has shared lines, It is a common bus used for both data and address transmission. We can perform multiple functions at a same time using same line.
+	It consists of address valid and data valid control lines. The advantage of multiplexed bus  is the use of fewer lines but it also comes with a disadvantage which is more complex control.
