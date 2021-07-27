@@ -1,0 +1,11 @@
+main:
+	li $t0,1
+print:
+	la $a0,$t0
+	li $v0,4
+	syscall
+	
+	addi $t0,$t0,1
+	ble $t0,5, print
+	li $v0,10
+	syscall
