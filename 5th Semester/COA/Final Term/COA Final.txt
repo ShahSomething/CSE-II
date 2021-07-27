@@ -1,0 +1,60 @@
+
+Question 1:
+An operand is a quantity on which an operation is to be performed. Mathematical operations can be performed on an operand while an Opcode is part of an instruction that specifies the operation that is to be performed on the operand. Opcodes are represented in binary form.
+Examples:
+For the examples I will use Mips assembly language to demonstrate the difference between Operands and Opcodes.
+1) addi $t0,$t1,4
+In this example addi is an instruction which has an Opcode of (001000) and $t0,$t1 and 4 are its operands, this instruction adds the value stored in $t1 to 4 and stores the result in $t0.
+2) beq $t1,$t2, target
+In this example beq is an instruction which has an Opcode of (000100) and $t1,$t2 and target are its operands, this instruction compares the values stored in $t1 and $t2 and 
+if they are equal it will execute the subroutine "target".
+
+Question 2:
+Control Sequencer:
+It controls the function doing in SAP, Means that it controls the process in 
+SAP. Control Sequencer decides that which component of SAP will be 
+active at a specific time. It consist of 12 bit CON word by which it can be decide that which component will be active at this time.
+
+USE of 12 bit CON Word:
+CON word contains:
+                                  Cp, Ep, Lm', CE', Li', Ei', La', Ea, Su, Eu, Lb', Lo'
+this is the CON word which is uses to control the process running in SAP.
+
+Question 3:
+Flags represent the status of arithmetic and logical operation. They keep track of a changing conditions during computer run. The SAP-2 has two flags:
+Sign Flag:
+                The sign flag is set when the accumulator contents become negative during the execution of some instructions.
+Zero Flag:
+                The zero flag is set when the accumulator contents are zero
+Example:
+If we subtract 7 from 7
+Result is zero, so zero flag will be 1.
+
+If we subtract 7 from 3.
+Result is negative thus sign flag will be 1.
+
+If we add 7 and 3.
+Result is positive thus sign flag will be zero.
+
+Question 4:
+Handshaking is an interaction between a CPU and a device that takes place during an 1 or 0 data transfer. In SAP-2 the handshaking takes place as follows. After you enter two digits (1 byte) into the hexadecimal encoder  the data is loaded into port 1 of SAP 2; at the same
+time, a high READY bit is sent to port 2. Before accepting input data, the CPU checks the READY bit in port 2. If the READY bit is low, the CPU waits. If the READY bit is high. the CPU loads the data in port 1. After the data transfer is finished, the CPU sends a high
+ACKNOWLEDGE signal to the hexadecimal keyboard en-coder, this resets the READY bit to 0. The ACKNOWLEDGE bit then is reset to low.
+After you key in a new byte, the cycle starts over With
+new data going to the port 1 and a high READY bit to port 2.
+The sequence Of SAP-2 handshaking is given below:
+1.READY bit(bit 0,port 2) goes high.
+2.input the data in port 1 to the CPU.
+3.ACKNOWLEDGE bit(bit 7, port 4) goes high to reset READY bit.
+4. Reset the ACKNOWLEDGE bit.
+
+
+
+Question 5:
+Stack:
+A reserved area of memory used to keep track of a program's internal operations, including functions, return addresses, passed parameters, etc. A stack is
+usually maintained as a "last in, first out" (LIFO) data structure, so that the last item added to the structure is the first item used.
+Relation to Stack Pointer:
+The stack pointer is a small register used to store the address requested by the last program on the stack. 
+The stack is a dedicated buffer, storing data from top to bottom. As new requests arrive, they will "push" older requests. The most recently entered request is always at the top of the stack,
+ and the program always receives requests from the top.
