@@ -1,0 +1,30 @@
+.data
+	str: .asciiz "\nEnter any Two numbers: "
+	str1: .asciiz "Sum of the numbers is: "
+	zero: .float 0.0
+.text
+main:
+	lwc1 $f1, zero	
+
+	li $v0,4
+	la $a0,str
+	syscall
+
+	li $v0,6
+	syscall
+	add.s $f2,$f0,$f1
+	
+	li $v0,6
+	syscall
+	add.s $f3,$f0,$f1
+
+	li $v0,4
+	la $a0,str1
+	syscall
+	add.s $f4,$f3,$f2
+	add.s $f12,$f4,$f1
+	li $v0,2
+	syscall
+
+	li $v0,10
+	syscall
