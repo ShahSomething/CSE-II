@@ -1,0 +1,5 @@
+Question: Device three plans for repayment of $(Your Registration Number*10) in (4 years for Section A, 5 years for Section B and 3 years for Repeaters and Section C) years with an interest rate of (8.5% for Section A, 7.5% for Section B and 6.5% for Repeaters and Section C).
+i) Plan 1: At end of each year pay ($100 for Section A, $200 for Section B and $300 for Repeaters and Section C) principal plus interest due. And the remaining Principle and Interest at last year.
+ii) Plan 2: Pay interest due at end of each year and principal at end of 5 years.
+iii) Plan 3: Pay in equal end of year payments ($150 for Section A, $250 for Section B and $350 for Repeaters and Section C) inclusive of interest. And the remaining Principle and Interest at last year.
+Note Plan (i) and Plan (iii) are different from each other.
