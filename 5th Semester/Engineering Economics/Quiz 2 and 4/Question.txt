@@ -1,0 +1,5 @@
+Quiz # 02: Find F in terms of P.
+Quiz # 04: Find P.
+Take interest rate= 12.5%
+P= (Your Reg # x10)
+A= (Your Reg# x5)
