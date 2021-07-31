@@ -1,0 +1,19 @@
+Question 1:
+Suppose after graduating from college, you apply for job at several firms. You get calls from two companies: Company A and Company B. 
+Company A offers $20 / hour and Company B offers $15 / hour. 
+Company A deducts 2% / hour from basic salary as training costs from fresh graduates for first 6 months and Company B offers 3% /hour of basic salary as travel allowance. 
+The travelling costs for Company A are $25 and Company B are $35 daily. 
+Both the companies have daily 8 hours work load but Company A includes the half hour lunch break in working hour 'while Company B does not. 
+Which option will you choose in such scenario? Formulate the problem solution and analyze this problem using engineering economics analysis procedure. 
+Develop consistent viewpoints and use common unit of measure for evaluation of alternates.
+
+Question 2:
+The management team of a small manufacturing company is under pressure to increase the profitability in order to get much needed 
+loan from the bank to purchase a more modern pattern cutting machine worth $1,25,000. 
+There are two possibilities under consideration: (i) To sell the old pattern cutting machine worth $50,000 
+and sell the waste wood chips and shavings worth $1,500 and take loan from bank for the remaining amount to buy 
+the modern pattern cutting machine. (ii) To renovate the old pattern cutting machine in $25,000 and 
+sell it in $80,000 and take loan from bank for the remaining amount to buy the modern pattern cutting machine. 
+Formulate the company’s problem and analyze this problem using engineering economics analysis procedure. 
+What is the asset value for the company in both the cases? Also mention which principle (s) of Engineering Economics 
+did you consider for making the decision?
