@@ -1,0 +1,28 @@
+Frequency	Time Period(1/f)	Duty Cycle	ON		OFF
+80Hz		12.5 ms  		10%		1.25ms 		11.25ms
+40Hz		25 ms	 		20%		5ms    		20ms
+20Hz		50 ms	 		40%		20ms   		30ms	
+10Hz		100 ms	 		80%		80ms   		20ms
+
+1) 1.25ms = 1250us
+	65535(FFFF in hex)-1250 = 64285(FB1D)
+   11.25ms = 11250us
+	65535-11250 = 54285(D40D)
+
+2) 5ms = 5000us
+	65535-5000 = 60535(EC77)
+   20ms = 20000us
+	65535-20000 = 45535(B1DF)
+
+3) 20ms = 20000us
+	65535-20000 = 45535(B1DF)
+   30ms = 30000us
+	65535-30000 = 35535(8ACF)
+
+4) 80ms = 80000us
+	65.535ms is the max delay we can create, so to attain a delay of 80ms, we should create a delay
+	of 40ms and run it 2 times.
+   40ms = 40000us
+   	65535-40000 = 25535(63BF)
+   20ms = 20000us
+	65535-20000 = 45535(B1DF)
