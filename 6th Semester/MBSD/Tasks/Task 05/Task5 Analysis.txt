@@ -1,0 +1,14 @@
+We need a delay of 1 minute = 60 sec
+
+1 sec = 1000msec
+60 sec = 60000msec
+
+65.535ms is the max delay we can create, so to attain a delay of 60000ms, we should create a delay
+of 60ms and run it 1000 times.
+
+	Timer1		Timer0
+     Gate C/T M1 M0  Gate C/T M1 M0
+     0     0  0   1   0    1  1   0	(Hex= 16)
+
+Timer 1: Used as Timer with mode 1
+Timer 0: Used as Counter with mode 2
