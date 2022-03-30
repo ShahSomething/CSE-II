@@ -1,0 +1,139 @@
+Microsoft Windows [Version 10.0.19043.1110]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Shah Raza>e:
+
+E:\>cd E:\xampp\mysql\bin
+
+E:\xampp\mysql\bin>mysql.exe -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.18-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database final;
+Query OK, 1 row affected (0.028 sec)
+
+MariaDB [(none)]> use final
+Database changed
+MariaDB [final]> create table students (
+    -> SID primary key not null,
+    -> Fname ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'primary key not null,
+Fname' at line 2
+MariaDB [final]> create table students (
+    -> SID int primary key not null,
+    -> Fname varchar(30),
+    -> Lname varchar(30),
+    -> GID fore;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+MariaDB [final]> create table groups(
+    -> GID int primary key not null,
+    -> Name varchar(30)
+    -> );
+Query OK, 0 rows affected (0.265 sec)
+
+MariaDB [final]> create table students (
+    -> SID int primary key not null,
+    -> Fname varchar(30),
+    -> Lname varchar(30),
+    -> GID int,
+    -> foreign key(GID) references groups(GID)
+    -> );
+Query OK, 0 rows affected (0.278 sec)
+
+MariaDB [final]> create table results(
+    -> jshd;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2
+MariaDB [final]> create table subjects(
+    -> subjectID int primary key not null,
+    -> Title varchar(30)
+    -> );
+Query OK, 0 rows affected (0.257 sec)
+
+MariaDB [final]> create table results(
+    -> SID int primary key not null,
+    -> subjectID int,
+    -> Mark int,
+    -> foreign key(SID) references students(SID),
+    -> foreign key(subjectID) references subjects(subjectID)
+    -> );
+Query OK, 0 rows affected (0.312 sec)
+
+MariaDB [final]> create table marks(
+    -> MID int primary key not null,
+    -> Date date,
+    -> SID int,
+    -> foreign key(SID) references results(SID)
+    -> );
+Query OK, 0 rows affected (0.202 sec)
+
+MariaDB [final]> show tables;
++-----------------+
+| Tables_in_final |
++-----------------+
+| groups          |
+| marks           |
+| results         |
+| students        |
+| subjects        |
++-----------------+
+5 rows in set (0.001 sec)
+
+MariaDB [final]> create table teachers(
+    -> teacherID int primary key not null,
+    -> Fname varchar(30),
+    -> Lname varchar(30)
+    -> );
+Query OK, 0 rows affected (0.202 sec)
+
+MariaDB [final]> create table subjectTeacher(
+    -> subjectID int primary key not null,
+    -> teacherID int primary key not null,
+    -> GID int,
+    -> foreign key(subjectID) references subjects(subjectID),
+    -> foreign key(teacherID) references teachers(teacherID),
+    -> foreign key(GID) references groups(GID)
+    -> );
+ERROR 1068 (42000): Multiple primary key defined
+MariaDB [final]> create table subjectTeacher(
+    -> subjectID int,
+    -> teacherID int,
+    -> GID int,
+    -> foreign key(subjectID) references subjects(subjectID),
+    -> foreign key(teacherID) references teachers(teacherID),
+    -> foreign key(GID) references groups(GID),
+    -> primary key(subjectID,teacherID)
+    -> );
+Query OK, 0 rows affected (0.207 sec)
+
+
+MariaDB [final]> insert into groups values
+    -> (1,'Hunters'),
+    -> (2,'Scholars'),
+    -> (3,'Killers'),
+    -> (4,'Snakes'),
+    -> (5,'Losers');
+Query OK, 5 rows affected (0.064 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [final]> insert into students values
+    -> (1,'Shah','Raza',1),
+    -> (2,'Ashiq','Ullah',2),
+    -> (3,'Zohaib','Saeed',3),
+    -> (4,'Muhammad','Zulkifal',4),
+    -> (5,'Hassan','Mehmood',5);
+Query OK, 5 rows affected (0.091 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [final]> insert into subjects values
+    -> (1,'DBMS'),
+    -> (2,'MBSD'),
+    -> (3,'DSD'),
+    -> (4,'TW'),
+    -> (5,'DCN');
+Query OK, 5 rows affected (0.078 sec)
+Records: 5  Duplicates: 0  Warnings: 0
