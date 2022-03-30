@@ -1,0 +1,5 @@
+Frequency	Time Period(1/f)	Duty Cycle	ON		OFF
+80Hz		12.5 ms  		10%		1.25ms 		11.25ms
+40Hz		25 ms	 		20%		5ms    		20ms
+20Hz		50 ms	 		40%		20ms   		30ms	
+10Hz		100 ms	 		80%		80ms   		20ms
